@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garuda Eagleview Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="./garudan-logo.png" alt="Logo">
+        </div>
+        <div class = "title">
+            <img class = "title" src="/images/title.png" alt="title">
+        </div>
+        <button class="login-button">Login</button>
+    </div>
+    
+    <div class="main-content">
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">☰</div>
+            <ul class="menu-items" id="menu">
+                <li><a href="#">Batch 1</a></li>
+                <li><a href="#">Batch 2</a></li>
+                <li><a href="#">Batch 3</a></li>
+                <li><a href="#">Batch 4</a></li>
+            </ul>
+        </div>
+        
+        <div class="content-box">
+            <div class="box">
+                <div class="box1">Warehouse</div>
+                <div class="arrow"><img src="/images/arrow.png" alt="Description of image"></div> <!-- Right Arrow -->
+                <div class="box2">Transport</div>
+                <div class="arrow"><img src="/images/arrow.png" alt="Description of image"></div><!-- Right Arrow -->
+                <div class="box3">Retail</div>
+            </div>
+            <div class="box">
+                <iframe class ="frame" width="600" height="400" src="https://lookerstudio.google.com/embed/reporting/da0b3b89-14cd-491c-bca9-13082083f150/page/A" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+                <iframe class ="frame" width="600" height="400" src="https://lookerstudio.google.com/embed/reporting/f698726a-b6e1-40ae-8c3a-005d16ed29e6/page/A" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            </div>
+        </div>
+
+        <div class="side-boxes">
+            <div class="side-box">Top</div>
+            <div class="side-box">Mid</div>
+            <div class="side-box">Bottom</div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
