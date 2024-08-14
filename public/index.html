@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garuda Eagleview Dashboard</title>
+    <title>Garudan Eagleview Dashboard</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -31,11 +31,11 @@
         
         <div class="content-box">
             <div class="box">
-                <div class="box1">Warehouse</div>
+                <div class="box1 hover-info">Warehouse</div>
                 <div class="arrow"><img src="/images/arrow.png" alt="Description of image"></div> <!-- Right Arrow -->
-                <div class="box2">Transport</div>
+                <div class="box2 hover-info">Transport</div>
                 <div class="arrow"><img src="/images/arrow.png" alt="Description of image"></div><!-- Right Arrow -->
-                <div class="box3">Retail</div>
+                <div class="box3 hover-info">Retail</div>
             </div>
             <div class="box">
                 <iframe class ="frame" width="600" height="400" src="https://lookerstudio.google.com/embed/reporting/da0b3b89-14cd-491c-bca9-13082083f150/page/A" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
@@ -43,6 +43,22 @@
             </div>
         </div>
     </div>
+    <!-- Chatbot HTML Code -->
+    <div class="chatbot-container">
+        <div class="chatbot-icon" onclick="toggleChatbot()">💬</div>
+        <div class="chatbot-box" id="chatbot-box">
+            <div class="chatbot-header">
+                <span>Chatbot</span>
+                <button class="close-chatbot" onclick="toggleChatbot()">✖</button>
+            </div>
+            <div id="chatbot-content">
+                <!-- Add your chatbot iframe or content here -->
+                <p>Hello! How can I assist you today?</p>
+                <button onclick="fetchReport()"> Generate Report for average Data</button>
+            </div>
+        </div>
+    </div>
+    
 
     <script src="./script.js"></script>
 </body>

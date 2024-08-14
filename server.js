@@ -5,6 +5,7 @@ const express = require('express');     //Express app
 const bodyParser = require('body-parser');    //BodyParser middleware, Parse json objects etc
 const mongoose = require('mongoose');     //For Local MongoDB connection
 const gpsDataRoutes = require('./routes/gpsData');     //Contains all routes for gps api
+const geminiRoutes = require('./routes/gemini')
 
 const app = express();      //Create an Express App
 const port = process.env.PORT || 3000;    //Access environment variable port
@@ -25,7 +26,7 @@ catch(err){
 
 app.use('/api', gpsDataRoutes);   //Use the gps api routes
 
-
+app.use('/gemini-api',geminiRoutes);
 //Listen in Port
 app.listen(port, () => {   
   console.log(`Server running at http://localhost:${port}/`);

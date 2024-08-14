@@ -152,6 +152,44 @@ body {
   background-color:#7CB9E8; /* Light Green */
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+.content-box .box .hover-info {
+  position: relative;
+  cursor: pointer; /* Change cursor to pointer */
+  transition: transform 0.3s ease-in-out;
+}
+
+.content-box .box .hover-info:hover {
+  transform: scale(1.05); /* Slight zoom effect for a cool look */
+}
+
+.content-box .box .hover-info::after {
+  content: "humidity - normal \A pressure - normal \A temperatue - normal";
+  white-space: pre; /* Preserve line breaks */
+  position: absolute;
+  bottom: -30px; /* Position the comment box slightly below the element */
+  left: 0;
+  width: 97%; /* Make the comment box smaller */
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 5px; /* Reduce padding for a smaller box */
+  border-radius: 3px; /* Slightly round the corners */
+  font-size: 20px; /* Smaller font size for a comment-like appearance */
+  font-weight: 500;
+  display: flex;
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+  text-align: center; /* Center the text within the lines */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 10;
+  text-align: left; /* Align text to the left */
+}
+
+.content-box .box .hover-info:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
 
 /* Arrow Styling */
 .arrow {
@@ -183,4 +221,65 @@ body {
 }
 .frame{
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+/* Chatbot Container */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.chatbot-icon {
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.chatbot-icon:hover {
+  transform: scale(1.1);
+}
+
+.chatbot-box {
+  display: none;
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.chatbot-header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-content {
+  padding: 15px;
+  height: 200px; /* Adjust this as per your needs */
+  overflow-y: auto;
+}
+
+.close-chatbot {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chatbot-box.show {
+  display: block;
 }
